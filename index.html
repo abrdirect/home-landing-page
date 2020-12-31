@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <div class="wrapper">
@@ -15,35 +17,30 @@
                 <span>Search</span>
                 <span>&#x26B2;</span>
             </div>
-        
+
             <div class="weather">
-                <span>Vancouver, Canada</span>
-                <span>25</span>
-                <span>&#x2103;</span>
-                <span>&#x263C;</span>
+                <span>Vancouver, Canada </span>
+                <span id="mainTemperature"></span>
+                <span id="feelsLike"></span>
+                <span id="weatherDescription"></span>
+                <img id="iconWeather" src="" alt="Icon weather">
             </div>
         </header>
-    
+
         <main>
             <time id="time" onload="displayTime()">
-                    <span id="hours"></span>
-                    <span class="colon">:</span>
-                    <span id="minutes"></span>
-                    <span class="colon">:</span>
-                    <span id="seconds"></span>
-                    <span id="ampm"></span>
+                <span id="clock"></span>
             </time>
             <h1>
-                <span>Good</span>
-                <span>Morning</span>
-                <span>User</span>
+                <span id="greeting"></span>
+                <span editable>User</span>
             </h1>
             <h2>
                 <span>What is your main focus today?</span>
             </h2>
-    
+
         </main>
-    
+
         <footer>
             <p id="quote"></p>
             <p id="author"></p>
@@ -54,4 +51,5 @@
 
     <script src="js/main.js"></script>
 </body>
+
 </html>

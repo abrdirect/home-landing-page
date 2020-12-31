@@ -21,7 +21,18 @@ header {
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
+    align-items: center;
 }
+
+div.weather {
+    display: flex;
+    align-items: center;
+}
+
+div.weather span {
+    margin: auto 10px;
+}
+
 
 main {
     display: flex;
