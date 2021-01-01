@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: 'Nunito', sans-serif;
     color: white;
     background-image: url(https://source.unsplash.com/user/danielsessler/1920x1080);
     background-size: cover;
@@ -21,6 +21,7 @@ header {
     display: flex;
     justify-content: space-between;
     font-size: 1.2rem;
+    font-weight: 300;
     align-items: center;
 }
 
@@ -41,12 +42,30 @@ main {
     align-items: center;
 }
 
+h1, h2 {
+    font-weight: 400;
+}
+
+h2 {
+    margin-top: 1rem;
+    opacity: 0.8;
+}
+
+
 footer {
     text-align: center;
     font-size: 1.2rem;
+    font-weight: 300;
 }
 
 time {
     font-size: 8rem;
+    font-weight: lighter;
+
 }
 
+@media (max-width: 768px) {
+    time {
+        font-size: 4rem;
+    }
+}
