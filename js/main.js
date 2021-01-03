@@ -14,7 +14,13 @@ function displayTime() {
       let ampm = '';
       let greeting = '';
 
-      if (hours > 12) {
+      let year = date.getFullYear();
+      document.querySelector('#year').innerHTML = date.getFullYear();
+
+      if (hours == 12) {
+            ampm = 'pm';
+            greeting = 'Good afternoon';
+      } else if (hours > 12) {
             hours = hours - 12;
             ampm = 'pm';
             greeting = 'Good afternoon';
@@ -23,16 +29,16 @@ function displayTime() {
             greeting = 'Good morning';
       };
 
+      if (hours > 6 && ampm == 'pm') {
+            greeting = 'Good evening';
+      };
+
       if (minutes < 10) {
             minutes = '0' + minutes;
       };
 
       if (seconds < 10) {
             seconds = '0' + seconds;
-      };
-
-      if (hours > 6 && ampm == 'pm') {
-            greeting = 'Good evening';
       };
 
       document.querySelector('#clock').innerHTML = `${hours} : ${minutes} : ${seconds} ${ampm}`;
@@ -46,8 +52,6 @@ const city = '?q=Vancouver';
 const weatherApiKey = '&appid=d92a5c0540378953fe9c8eb9a2a9db57';
 const units = '&units=metric'
 const apiUrl = apiSite + city + weatherApiKey + units;
-
-console.log(apiUrl);
 
 fetch(apiUrl)
       .then(res => res.json())

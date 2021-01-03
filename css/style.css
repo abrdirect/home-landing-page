@@ -56,12 +56,17 @@ footer {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 300;
+    margin-bottom: 1rem;
 }
 
-time {
+time p {
+    text-align: center;
+    font-size: 12rem;
+}
+
+time span {
     font-size: 8rem;
     font-weight: lighter;
-
 }
 
 @media (max-width: 768px) {
